@@ -28,7 +28,7 @@
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
 
-    let yearToday = 2025;
+     let yearToday = 2025;
 
     const isAdult = people.some(function (computeyear) {
       if (yearToday - computeyear.year >= 19) {
@@ -36,10 +36,27 @@
       } else {
         console.log(`${computeyear.name} is not 19 years old`);
       }
-    })
+    });
 
+    const isAdult2 = people.some((computeYear) => yearToday - computeYear.year >= 19);
+    console.log({isAdult2});
+
+    const isAllAdults = people.every((computeYear) => {
+      if (yearToday - computeYear.year < 19) {
+        console.log(`${computeYear.name} is not 19 years old`);
+        return false;
+      } else {
+        console.log(`${computeYear.name} is years 19 years old`);
+        return true;
+      }
+    });
+
+    const isAllAdults2 = people.every((computeYear) => yearToday -computeYear.year >= 19);
+    console.log({isAllAdults2});
     // Array.prototype.every() // is everyone 19 or older?
 
+    
+    
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
