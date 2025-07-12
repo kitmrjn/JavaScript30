@@ -80,12 +80,22 @@
 
       return aLast < bLast ? 1 : -1;
     });
-
     console.table(sortLastName);
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const reduceDuplicate = data.reduce((accumulator, index) => {
+      if(!accumulator[index]) {
+        accumulator[index] = 0;
+      }  
+        accumulator[index]++;
+        return accumulator;
+      
+    }, {});
+
+    console.table(reduceDuplicate);
   </script>
 </body>
 </html>
