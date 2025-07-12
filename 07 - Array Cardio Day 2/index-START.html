@@ -27,6 +27,17 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
+
+    let yearToday = 2025;
+
+    const isAdult = people.some(function (computeyear) {
+      if (yearToday - computeyear.year >= 19) {
+        console.log(`${computeyear.name} is atleast 19 years old`);
+      } else {
+        console.log(`${computeyear.name} is not 19 years old`);
+      }
+    })
+
     // Array.prototype.every() // is everyone 19 or older?
 
     // Array.prototype.find()
